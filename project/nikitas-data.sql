@@ -1,3 +1,5 @@
+/* COSTUMER */
+
 /*
 How to insert:
 insert into <table>(attr1, attr2, ...) values(value1, value2, ...)
