@@ -6,7 +6,7 @@ insert into <table>(attr1, attr2, ...) values(value1, value2, ...)
 /* customer */
 
 /* nick pagonas */
-
+/* change */
 
 /*end*/
 
