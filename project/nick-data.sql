@@ -5,48 +5,65 @@ insert into <table>(attr1, attr2, ...) values(value1, value2, ...)
 
 /* customer */
 
-/* kati allo */
+/* nick pagonas */
+
+
+/*end*/
 
 /* customer_phone */
 
-/* kati allo */
+/*end*/
 
 /* customer_email */
 
-/* kati allo */
+
+/*end*/
 
 /* place */
 
-/* kati allo */
+/*end*/
 
 /* service */
 
-/* kati allo */
+
+
+/*end*/
 
 /* service_with_subscription */
 
-/* kati allo */
+
+
+
+/*end*/
 
 /* subscribes */
 
-/* kati allo */
+
+
+/*end*/
 
 /* service_charge */
 
-/* kati allo */
+/*end*/
 
 /* service_without_subscription */
 
-/* kati allo */
+
+/*end*/
 
 /* has_access_to */
 
-/* kati allo */
+
+/*end*/
 
 /* visits */
 
-/* kati allo */
+
+
+/*end*/
 
 /* offered_in */
 
-/* kati allo */
+
+
+/*end*/
