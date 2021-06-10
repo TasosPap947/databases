@@ -1,13 +1,9 @@
 
 /* USE THIS ONLY IF YOU WANT TO CHANGE THE RELATIONAL SCHEMA */
 
-/*
-
 drop database `db-ntua`;
 create database `db-ntua`;
 use `db-ntua`;
-
-*/
 
 create table customer (
   nfc_id int,
@@ -18,7 +14,11 @@ create table customer (
   document_type enum("Passport", "ID") not null,
   document_authority varchar(20) not null,
 
-  primary key (nfc_id)
+  primary key (nfc_id),
+  constraint document check (
+                        (document_type = "ID" and (document_number like "________"))
+                        or (document_type = "Passport" and document_number like "_________")
+                      )
 );
 
 create table customer_phone (
@@ -27,9 +27,11 @@ create table customer_phone (
 
   primary key (phone_number),
 
-  foreign key (customer_id) references customer(nfc_id),
+  foreign key (customer_id) references customer(nfc_id)
+    on delete cascade
+    on update cascade,
 
-  constraint phone_number check (phone_number like "[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]")
+  constraint phone_number check (phone_number like "__________")
 );
 
 create table customer_email (
@@ -39,6 +41,8 @@ create table customer_email (
   primary key (email),
 
   foreign key (customer_id) references customer(nfc_id)
+    on delete cascade
+    on update cascade,
 
   constraint email check (email like "%_@__%.__%")
 );
@@ -46,17 +50,18 @@ create table customer_email (
 create table place (
   place_id int,
   number_of_beds int not null,
-  place_name varchar(20) not null,
-  place_description enum (
-                      "Room",
-                      "Elevator",
-                      "Bar",
-                      "Restaurant",
-                      "Conference Room",
-                      "Gym",
-                      "Sauna",
-                      "Hair Salon"
-                    ) not null,
+  place_name enum (
+               "Corridor",
+               "Room",
+               "Elevator",
+               "Bar",
+               "Restaurant",
+               "Conference Room",
+               "Gym",
+               "Sauna",
+               "Hair Salon"
+             ) not null,
+  number int,
   floor_number int,
   corridor enum("North", "East", "South", "West"),
 
@@ -66,6 +71,7 @@ create table place (
 create table service (
   service_id int,
   service_description enum(
+                        "Room",
                         "Drink at bar",
                         "Food and drink at restaurant",
                         "Hair salon",
@@ -80,6 +86,7 @@ create table service (
 create table service_with_subscription (
   service_id int,
   service_description enum(
+                        "Room",
                         "Gym",
                         "Sauna",
                         "Use conference room"
@@ -88,6 +95,8 @@ create table service_with_subscription (
   primary key (service_id),
 
   foreign key (service_id) references service(service_id)
+    on delete cascade
+    on update cascade
 );
 
 create table subscribes (
@@ -97,22 +106,30 @@ create table subscribes (
 
   primary key (customer_id, service_id),
 
-  foreign key (customer_id) references customer(nfc_id),
+  foreign key (customer_id) references customer(nfc_id)
+    on delete cascade
+    on update cascade,
   foreign key (service_id) references service_with_subscription(service_id)
+    on delete cascade
+    on update cascade
 );
 
 create table service_charge (
   charge_date_time timestamp not null,
   charge_description varchar(50),
-  charge_amount int not null,
-  service_id int not null,
-  customer_id int not null,
+  charge_amount numeric(8,2) not null,
+  service_id int,
+  customer_id int,
+  charge_id int,
 
-  primary key (customer_id, service_id, charge_date_time),
+  primary key (charge_id),
 
-  foreign key (customer_id) references customer(nfc_id),
-  foreign key (service_id) references service(service_id),
-  foreign key (customer_id, service_id) references subscribes(customer_id, service_id)
+  foreign key (customer_id) references customer(nfc_id)
+    on delete set null
+    on update cascade,
+  foreign key (service_id) references service(service_id)
+    on delete set null
+    on update cascade
 );
 
 create table service_without_subscription (
@@ -126,6 +143,8 @@ create table service_without_subscription (
   primary key (service_id),
 
   foreign key (service_id) references service(service_id)
+    on delete cascade
+    on update cascade
 );
 
 create table has_access_to (
@@ -136,21 +155,29 @@ create table has_access_to (
 
   primary key (customer_id, place_id),
 
-  foreign key (customer_id) references customer(nfc_id),
+  foreign key (customer_id) references customer(nfc_id)
+    on delete cascade
+    on update cascade,
   foreign key (place_id) references place(place_id)
+    on delete cascade
+    on update cascade
 );
 
-create table visits (
+create table visited (
   customer_id int,
-  place_id int,
+  place_id int not null,
   entry_date_time timestamp not null,
   exit_date_time timestamp,
+  visit_id int,
 
-  primary key (customer_id, place_id, entry_date_time),
+  primary key (visit_id),
 
-  foreign key (customer_id) references customer(nfc_id),
-  foreign key (place_id) references place(place_id),
-  foreign key (customer_id, place_id) references has_access_to(customer_id, place_id)
+  foreign key (customer_id) references customer(nfc_id)
+    on delete set null
+    on update cascade,
+  foreign key (place_id) references place(place_id)
+    on delete cascade
+    on update cascade
 );
 
 create table offered_in (
@@ -159,6 +186,10 @@ create table offered_in (
 
   primary key (service_id, place_id),
 
-  foreign key (place_id) references place(place_id),
+  foreign key (place_id) references place(place_id)
+    on delete cascade
+    on update cascade,
   foreign key (service_id) references service(service_id)
+    on delete cascade
+    on update cascade
 );
