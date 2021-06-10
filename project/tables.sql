@@ -23,21 +23,24 @@ create table customer (
 
 create table customer_phone (
   customer_id int,
-  /*country_code int(4),*/
-  phone_number int(10) not null,
+  phone_number varchar(10) not null,
 
   primary key (phone_number),
 
-  foreign key (customer_id) references customer(nfc_id)
+  foreign key (customer_id) references customer(nfc_id),
+
+  constraint phone_number check (phone_number like "[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]")
 );
 
 create table customer_email (
   customer_id int,
-  email varchar(20) not null, /* add constraint like %@% */
+  email varchar(30) not null,
 
   primary key (email),
 
   foreign key (customer_id) references customer(nfc_id)
+
+  constraint email check (email like "%_@__%.__%")
 );
 
 create table place (
