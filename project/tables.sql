@@ -51,15 +51,15 @@ create table place (
   place_id int,
   number_of_beds int not null,
   place_name enum (
-               "Corridor",
-               "Room",
-               "Elevator",
                "Bar",
-               "Restaurant",
                "Conference Room",
+               "Corridor",
+               "Elevator",
                "Gym",
-               "Sauna",
                "Hair Salon"
+               "Restaurant",
+               "Room",
+               "Sauna",
              ) not null,
   number int,
   floor_number int,
@@ -71,11 +71,11 @@ create table place (
 create table service (
   service_id int,
   service_description enum(
-                        "Room",
                         "Drink at bar",
                         "Food and drink at restaurant",
-                        "Hair salon",
                         "Gym",
+                        "Hair salon",
+                        "Room",
                         "Sauna",
                         "Use conference room"
                       ) not null,
@@ -86,8 +86,8 @@ create table service (
 create table service_with_subscription (
   service_id int,
   service_description enum(
-                        "Room",
                         "Gym",
+                        "Room",
                         "Sauna",
                         "Use conference room"
                       ) not null,
