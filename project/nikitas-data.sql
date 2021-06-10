@@ -1,4 +1,4 @@
-/* COSTUMER */
+/* COSTUMER CO*/
 
 /*
 How to insert:
