@@ -56,10 +56,10 @@ create table place (
                "Corridor",
                "Elevator",
                "Gym",
-               "Hair Salon"
+               "Hair Salon",
                "Restaurant",
                "Room",
-               "Sauna",
+               "Sauna"
              ) not null,
   number int,
   floor_number int,
