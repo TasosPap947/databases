@@ -68,7 +68,7 @@ values(100, "2000-01-02 13:40:00", "Strawberry Daquiri", 1, 1, 1);
 /* service_without_subscription */
 
 insert into service_without_subscription(service_description, service_id, service_cost)
-values("Drink at bar", 1);
+values("Drink at bar", 1, 8);
 
 /* has_access_to */
 
