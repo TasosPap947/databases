@@ -43,17 +43,21 @@ values
 insert into service(service_description, service_id)
 values
 ("Drink at bar", 1),
-("Sauna", 2);
+("Sauna", 2),
+("Room", 3);
 
 /* service_with_subscription */
 
 insert into service_with_subscription(service_description, service_id)
-values("Sauna", 2); /* Try sauna with id = 3 while sauna has id = 2 at service table */
+values("Sauna", 2), /* Try sauna with id = 3 while sauna has id = 2 at service table */
+("Room", 3);
 
 /* subscribes */
 
 insert into subscribes(customer_id, service_id, subscription_date_time)
-values(1, 2, "2000-01-01 00:00:00");
+values
+(1, 2, "2000-01-01 00:00:00"),
+(1, 3, "2000-01-01 00:00:00");
 
 /* service_charge */
 

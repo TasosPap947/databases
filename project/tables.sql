@@ -56,10 +56,10 @@ create table place (
                "Corridor",
                "Elevator",
                "Gym",
-               "Hair Salon"
+               "Hair Salon",
                "Restaurant",
                "Room",
-               "Sauna",
+               "Sauna"
              ) not null,
   number int,
   floor_number int,
@@ -79,6 +79,7 @@ create table service (
                         "Sauna",
                         "Use conference room"
                       ) not null,
+  service_cost numeric(8,2),
 
   primary key (service_id)
 );
@@ -91,6 +92,7 @@ create table service_with_subscription (
                         "Sauna",
                         "Use conference room"
                       ) not null,
+  service_cost numeric(8,2) not null,
 
   primary key (service_id),
 
@@ -139,6 +141,7 @@ create table service_without_subscription (
                         "Food and drink at restaurant",
                         "Hair salon"
                       ) not null,
+  service_cost numeric(8,2) not null,
 
   primary key (service_id),
 
@@ -156,10 +159,10 @@ create table has_access_to (
   primary key (customer_id, place_id),
 
   foreign key (customer_id) references customer(nfc_id)
-    on delete cascade
+    on delete restrict
     on update cascade,
   foreign key (place_id) references place(place_id)
-    on delete cascade
+    on delete restrict
     on update cascade
 );
 
