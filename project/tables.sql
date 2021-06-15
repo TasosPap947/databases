@@ -118,7 +118,15 @@ create table subscribes (
 
 create table service_charge (
   charge_date_time timestamp not null,
-  charge_description varchar(50),
+  charge_description enum(
+                        "Drink at bar",
+                        "Food and drink at restaurant",
+                        "Gym",
+                        "Hair salon",
+                        "Room",
+                        "Sauna",
+                        "Use conference room"
+                      ) not null,
   charge_amount numeric(8,2) not null,
   service_id int,
   customer_id int,
