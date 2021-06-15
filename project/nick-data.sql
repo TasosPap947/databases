@@ -40,17 +40,18 @@ values
 
 /* service */
 
-insert into service(service_description, service_id)
+insert into service(service_description, service_id, service_cost)
 values
-("Drink at bar", 1),
-("Sauna", 2),
-("Room", 3);
+("Drink at bar", 1, 8),
+("Sauna", 2, 20),
+("Room", 3, 150);
 
 /* service_with_subscription */
 
-insert into service_with_subscription(service_description, service_id)
-values("Sauna", 2), /* Try sauna with id = 3 while sauna has id = 2 at service table */
-("Room", 3);
+insert into service_with_subscription(service_description, service_id, service_cost)
+values
+("Sauna", 2, 20), /* Try sauna with id = 3 while sauna has id = 2 at service table */
+("Room", 3, 150);
 
 /* subscribes */
 
@@ -66,7 +67,7 @@ values(100, "2000-01-02 13:40:00", "Strawberry Daquiri", 1, 1, 1);
 
 /* service_without_subscription */
 
-insert into service_without_subscription(service_description, service_id)
+insert into service_without_subscription(service_description, service_id, service_cost)
 values("Drink at bar", 1);
 
 /* has_access_to */
