@@ -30,7 +30,7 @@ values
 ("1975-06-04", "P.D. Hollywood", "ΑΑA000003", "Passport", "Angelina", "Jolie", 28),
 ("1984-03-18", "P.D. Rio de Janeiro", "ΑΑA000004", "Passport", "Ronaldinho", "Moreira", 29),
 ("1981-08-08", "P.D. Basel", "AAA000005", "Passport", "Roger", "Federer", 30),
-("1940-03-11", "P.D. Gabon", "ΑΑA000006", "Passport", "Ugo", "Drogba", 31),
+("1940-03-11", "P.D. Gabon", "ΑΑA000006", "Passport", "Didier", "Drogba", 31),
 ("1997-12-25", "Α.Τ. Τήνου", "AAA000006", "Passport", "Κατερίνα", "Παπαρδέλα", 32),
 ("1998-04-19", "Α.Τ. Δράμας", "ΑΑ000026", "ID", "Ορέστης", "Κοκορέτσης", 33);
 
