@@ -1,0 +1,15 @@
+<style>
+.content-table {
+	border-collapse: collapse
+	margin: 25px 0;
+	font-size: 0.9em;
+	min-width: 400px;
+}
+
+.content-table thead th{
+	background-color: #009879;
+	color: #ffffff;
+	text-align: left;
+	font-weight: bold;
+}
+</style>
