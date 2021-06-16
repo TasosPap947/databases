@@ -6,7 +6,7 @@ include('header.php');
 <html lang="en" dir="ltr">
 
 <body>
-	
+
 	<p><a href="services.php">Πίσω στις υπηρεσίες</a></p>
 
 	<?php
@@ -38,7 +38,9 @@ include('header.php');
 		<br>
 
 		<?php
-		$query_date = " where place_name = '".$place_name."'";
+		if($place_name != ''){
+			$query_date = " where place_name = '".$place_name."'";
+		}
 		if(isset($_POST['submit'])){
 			$min_date = $_POST['min_date'];
 			$max_date = $_POST['max_date'];
