@@ -54,26 +54,26 @@ insert into place (place_id, place_name, number, number_of_beds, floor_number, c
 (40, "Hair Salon", 1, 0, 0, null),
 
 /*Corridors*/
-(41, "Corridor", 1, 0, 0, null), /*1 -- North*/
-(42, "Corridor", 2, 0, 0, null), /*2 -- East*/
-(43, "Corridor", 3, 0, 0, null), /*3 -- South*/
-(44, "Corridor", 4, 0, 0, null), /*4 -- West*/
-(45, "Corridor", 1, 0, 0, null),
-(46, "Corridor", 2, 0, 0, null),
-(47, "Corridor", 3, 0, 0, null),
-(48, "Corridor", 4, 0, 0, null),
-(49, "Corridor", 1, 0, 0, null),
-(50, "Corridor", 2, 0, 0, null),
-(51, "Corridor", 3, 0, 0, null),
-(52, "Corridor", 4, 0, 0, null),
-(53, "Corridor", 1, 0, 0, null),
-(54, "Corridor", 2, 0, 0, null),
-(55, "Corridor", 3, 0, 0, null),
-(56, "Corridor", 4, 0, 0, null),
-(57, "Corridor", 1, 0, 0, null),
-(58, "Corridor", 2, 0, 0, null),
-(59, "Corridor", 3, 0, 0, null),
-(60, "Corridor", 4, 0, 0, null),
+(41, "Corridor", 1, 0, 0, "North"),
+(42, "Corridor", 2, 0, 0, "East"),
+(43, "Corridor", 3, 0, 0, "South"),
+(44, "Corridor", 4, 0, 0, "West"), 
+(45, "Corridor", 1, 0, 0, "North"),
+(46, "Corridor", 2, 0, 0, "East"),
+(47, "Corridor", 3, 0, 0, "South"),
+(48, "Corridor", 4, 0, 0, "West"),
+(49, "Corridor", 1, 0, 0, "North"),
+(50, "Corridor", 2, 0, 0, "East"),
+(51, "Corridor", 3, 0, 0, "South"),
+(52, "Corridor", 4, 0, 0, "West"),
+(53, "Corridor", 1, 0, 0, "North"),
+(54, "Corridor", 2, 0, 0, "East"),
+(55, "Corridor", 3, 0, 0, "South"),
+(56, "Corridor", 4, 0, 0, "West"),
+(57, "Corridor", 1, 0, 0, "North"),
+(58, "Corridor", 2, 0, 0, "East"),
+(59, "Corridor", 3, 0, 0, "South"),
+(60, "Corridor", 4, 0, 0, "West"),
 
 
 
