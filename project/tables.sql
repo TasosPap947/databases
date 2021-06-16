@@ -12,7 +12,7 @@ create table customer (
   date_of_birth date not null,
   document_number varchar(20) not null,
   document_type enum("Passport", "ID") not null,
-  document_authority varchar(20) not null,
+  document_authority varchar(60) not null,
 
   primary key (nfc_id),
   constraint document check (
