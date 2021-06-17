@@ -92,7 +92,7 @@ select place_name from
     on customer.nfc_id = visited.customer_id
     ) join place
     on visited.place_id = place.place_id";
-    $query = $query.$query_date.";";
+    $query = $query.$query_date." order by visited.entry_date_time desc;";
     $result = mysqli_query($conn, $query);
     while($rows_data = mysqli_fetch_assoc($result))
     {
