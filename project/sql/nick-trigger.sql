@@ -1,6 +1,3 @@
-drop trigger if exists add_access;
-drop trigger if exists remove_access;
-
 delimiter $$
 
 create trigger add_access
