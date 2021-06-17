@@ -412,7 +412,7 @@ values
 
 
 
-/*service with service_with_subscription*/
+/*service_with_subscription*/
 insert into service_with_subscription (service_id, service_description, service_cost) values
 (4, "Gym", 10),
 (5, "Sauna",30),

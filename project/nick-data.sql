@@ -26,12 +26,14 @@ values
 /* customer_email */
 
 insert into customer_email(customer_id, email)
-values(1, "georgepapad@gmail.com");
+values
+(1, "georgepapad@gmail.com");
 
 /* customer_phone */
 
 insert into customer_phone(customer_id, phone_number)
-values(1, "0000000000");
+values
+(1, "0000000000");
 
 /* place */
 
@@ -47,31 +49,42 @@ insert into service(service_description, service_id, service_cost)
 values
 ("Drink at bar", 1, 8),
 ("Sauna", 2, 20),
-("Room", 3, 150);
+("Room", 3, 150),
+("Gym", 4, 5);
 
 /* service_with_subscription */
 
 insert into service_with_subscription(service_description, service_id, service_cost)
 values
 ("Sauna", 2, 20), /* Try sauna with id = 3 while sauna has id = 2 at service table */
-("Room", 3, 150);
+("Room", 3, 150),
+("Gym", 4, 5);
 
 /* subscribes */
 
 insert into subscribes(customer_id, service_id, subscription_date_time)
 values
 (1, 2, "2000-01-01 00:00:00"),
-(1, 3, "2000-01-01 00:00:00");
+(1, 3, "2000-01-01 00:00:00"),
+(1, 4, "2000-01-01 00:00:00");
 
 /* service_charge */
 
 insert into service_charge(charge_amount, charge_date_time, charge_description, customer_id, service_id, charge_id)
-values(100, "2000-01-02 13:40:00", "Drink at bar", 1, 1, 1);
+values
+(8, "2000-01-02 10:00:00", "Drink at bar", 1, 1, 1),
+(5, "2001-02-01 10:00:00", "Gym", 1, 4, 2),
+(8, "2001-02-01 11:00:00", "Drink at bar", 1, 1, 3),
+(8, "2001-02-01 12:00:00", "Drink at bar", 1, 1, 4),
+(5, "2001-02-01 13:00:00", "Gym", 1, 4, 5);
+
+
 
 /* service_without_subscription */
 
 insert into service_without_subscription(service_description, service_id, service_cost)
-values("Drink at bar", 1, 8);
+values
+("Drink at bar", 1, 8);
 
 /* has_access_to */
 
@@ -79,8 +92,9 @@ values("Drink at bar", 1, 8);
 
 /* NO TRIVIAL ACCESSES!!! */
 
-insert into has_access_to(customer_id, place_id, start_date_time, end_date_time)
-values(1, 2, "2000-01-01 00:00:00", null);
+-- insert into has_access_to(customer_id, place_id, start_date_time, end_date_time)
+-- values
+-- (1, 2, "2000-01-01 00:00:00", null);
 
 /* visited */
 
@@ -93,4 +107,6 @@ values
 /* offered_in */
 
 insert into offered_in(place_id, service_id)
-values(1, 1);
+values
+(1, 1),
+(3, 4);
