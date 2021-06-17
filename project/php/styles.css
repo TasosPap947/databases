@@ -26,8 +26,6 @@ body {
   min-height: 100vh;
   display:flex;
   flex-direction: column;
-
-
 }
 
 .footer {
@@ -39,6 +37,7 @@ body {
   color: white;
   line-height: 0px;
   text-align: center;
+  width: 100%;
 }
 
 .logo {
@@ -88,8 +87,8 @@ body {
 }
 
 p {
-margin-top: 30px;
-margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 
@@ -151,6 +150,73 @@ margin-bottom: 30px;
   line-height: 30px;
 }
 
+.stat-table {
+  width: 100%;
+  border-style: none;
+  margin-left:0%;
+  margin-right:0%;
+  padding: 1%;
+  border-spacing: 2px;
+  float: left;
+}
+
+.stat-table th{
+  background-color: #004d4d;
+  height: 30px;
+  color: #F0F8FF;
+}
+
+.stat-table caption{
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.stat-table tr {
+}
+
+.stat-table td {
+  padding:7px 0px;
+  background-color: #F6F9F9;
+  text-align: center;
+  line-height: 15px;
+
+}
+
+.stat-div {
+  padding: 1% 1%;
+  margin: 0%;
+  height: 500px;
+  width: 27%;
+  margin: 3% 3%;
+  float:left;
+  background-color: #5C8D8D;
+  border-radius: 20px;
+
+}
+
+.stat-body {
+  background-color: #AABCBC;
+  min-height: 100vh;
+  display: inline;
+  flex-direction: column;
+}
+
+.stat-body h3 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+}
+
+.stat-body h4 {
+  text-align: center;
+  margin-top: 40px;
+  text-decoration: underline;
+}
+
+
+
 .left {
   float:left;
 }
@@ -171,7 +237,6 @@ a:hover{
   background-color: #DDE7E7;
   margin-top: 35px;
   margin-bottom: 35px;
-
 }
 
 .welcome {
@@ -186,6 +251,10 @@ a:hover{
   align-items: : center;
   margin-bottom: 15px;
   margin-top:0px;
+}
+
+.welcome h2 {
+  text-shadow: 2px 2px black;
 }
 
 .inline {

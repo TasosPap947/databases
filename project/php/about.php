@@ -7,18 +7,37 @@ include('header.php');
 </div>
 <body>
 
-  <div class="box">
-    <h3> Στοιχεία Εργασίας </h3>
-    <p>Ιούνιος 2021<br>
-    <br> Ομάδα Μ: </p>
-    <ul>
-      <li> Νίκος Παγώνας, el18175</li>
-      <li> Αναστάσιος Παπαζαφειρόπουλος, el18079</li>
-      <li> Νικήτας Τσίννας, el18187</li>
-    </ul>
-  </div>
-</body>
+  <div class="stat-div">
+    <h2> Στοιχεία Εργασίας </h2><br><br><br>
+    <h3>Ιούνιος 2021<br><br><br>
+      <br> Ομάδα Μ: </h3>
+      <table class="stat-table">
+        <tr>
+          <th>Όνομα</th>
+          <th>Επίθετο</th>
+          <th>ΑΜ</th>
+        </tr>
+          <tr>
+            <td> Νίκος </td>
+            <td>Παγώνας</td>
+            <td>el18175</td>
+          </tr>
+          <tr>
+            <td> Αναστάσιος</td>
+            <td> Παπαζαφειρόπουλος</td>
+            <td> el18079</td>
+          </tr>
+          <tr>
+            <td> Νικήτας</td>
+            <td> Τσίννας</td>
+            <td>el18187</td>
+          </tr>
 
-<?php
-include ("footer.php")
-?>
+        </table>
+      </div>
+
+    </body>
+
+    <?php
+    include ("footer.php")
+    ?>

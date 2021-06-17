@@ -14,19 +14,19 @@ include('header.php');
 	<div class="inputs">
 		<form action="" method="post">
 				<h4>Τύπος Υπηρεσίας:</h4>
-				<label class="radio"><input type="radio" name="service_type" value="service">όλες</label>
-				<label class="radio"><input type="radio" name="service_type" value="service_without_subscription">χωρίς συνδρομή</label>
-				<label class="radio"><input type="radio" name="service_type" value="service_with_subscription">με συνδρομή</label>
+				<label class="radio"><input type="radio" name="service_type" value="service" checked>όλες</label>
+				<label class="radio"><input type="radio" name="service_type" value="service_without_subscription">χωρίς εγγραφή</label>
+				<label class="radio"><input type="radio" name="service_type" value="service_with_subscription">με εγγραφή</label>
 				<br><br><h4>Κόστος:</h4>
 			<div class="text">
 				<div class="text_input">
 					<label for="min_cost">ελάχιστο</label>
 				</div>
-				<input type="text" id="min_cost" name="min_cost" value="">
+				<input type="number" id="min_cost" name="min_cost" value="">
 				<div class="text_input">
 					<label for="max_cost">μέγιστο</label>
 				</div>
-				<input type="text" id="max_cost" name="max_cost" value="">
+				<input type="number" id="max_cost" name="max_cost" value="">
 			</div>
 			<label><input class="button" type="submit" name="submit" value="Καταχώρηση"></label>
 		</form>
