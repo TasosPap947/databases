@@ -2,11 +2,15 @@
 include('header.php');
 ?>
 
+<div class="welcome">
+  <h2> Υπηρεσίες και Χρήσεις </h2>
+</div>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <body>
-<br><br>
+
 	<div class="inputs">
 		<form action="" method="post">
 				<h4>Τύπος Υπηρεσίας:</h4>
@@ -41,15 +45,11 @@ include('header.php');
 				$query_cost = $query_cost." and service_cost <= ".$max_cost;
 			}
 			?>
-			<br><br>
-			<h3 class="output"> Αποτελέσματα Υπηρεσιών: </h3>
+			<div class="output">
+			<h3> Αποτελέσματα Υπηρεσιών: </h3>
 			<p>Κάντε κλικ πάνω σε μία υπηρεσία του πίνακα για να δείτε τις χρήσεις.</p>
-			<table
-			class="content-table"
-			align="left"
-			border="1px"
-			style="width:800px;
-			line-height:25px;" >
+			</div>
+			<table class="simple-table">
 			<thead>
 				<caption style="font-weight: bold">Υπηρεσίες</caption>
 				<tr>
@@ -66,7 +66,7 @@ include('header.php');
 			while($rows_data = mysqli_fetch_assoc($result))
 			{
 				?>
-				<tr align="center">
+				<tr>
 					<td><a href="visits.php
 						?service_description=<?php echo $rows_data['service_description'] ?>">
 						<?php echo $rows_data['service_description'] ?></a></td>
@@ -86,3 +86,7 @@ include('header.php');
 
 	</body>
 	</html>
+
+  <?php
+  include ("footer.php")
+  ?>

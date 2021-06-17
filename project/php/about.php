@@ -1,37 +1,24 @@
 <?php
 include('header.php');
 ?>
-<br><br>
+
+<div class="welcome">
+  <h2> Σχετικά </h2>
+</div>
 <body>
-  <br><br>
-  <h3 class="inputs">Από τους φοιτητές </h3>
-  <br>
-    <table
-    class="content-table"
-  	align="left"
-  	border="1px"
-  	style="width:800px;
-  	line-height:25px;">
-      <tr>
-        <th>Όνομα</th>
-        <th>Επίθετο</th>
-        <th>AM</th>
-      </tr>
 
-      <tr>
-        <td>Nίκος</td>
-        <td>Παγώνας</td>
-      </tr>
-      <tr>
-        <td>Τάσος</td>
-        <td>Παπαζαφειρόπουλος</td>
-      </tr>
-      <tr>
-        <td>Νικήτας</td>
-        <td>Τσίννας</td>
-      </tr>
-    </table>
-
-
-
+  <div class="box">
+    <h3> Στοιχεία Εργασίας </h3>
+    <p>Ιούνιος 2021<br>
+    <br> Ομάδα Μ: </p>
+    <ul>
+      <li> Νίκος Παγώνας, el18175</li>
+      <li> Αναστάσιος Παπαζαφειρόπουλος, el18079</li>
+      <li> Νικήτας Τσίννας, el18187</li>
+    </ul>
+  </div>
 </body>
+
+<?php
+include ("footer.php")
+?>
