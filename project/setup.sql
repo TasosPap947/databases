@@ -1732,38 +1732,7 @@ values
 (2, "Food and drink at restaurant", 20),
 (3, "Hair salon", 15);
 
--- ------------------------------------------------------------------------------
--- SUBSCRIBES
--- ------------------------------------------------------------------------------
 
-insert into subscribes (customer_id, service_id, subscription_date_time) values(14, 1001, "2020-10-28 12:00:00");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(14, 4, "2020-11-01 11:00:00");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(15, 2021, "2020-12-24 11:00:00");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(16, 2021, "2020-12-24 11:00:00");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(15, 5, "2020-12-24 11:00:00");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(25, 5, "2021-04-24 11:00:01");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(26, 5, "2021-04-24 11:00:02");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(27, 5, "2021-04-24 11:00:03");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(31, 5, "2021-04-24 11:00:04");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(32, 5, "2021-04-24 11:00:05");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(33, 5, "2021-04-24 11:00:06");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(30, 4, "2021-05-24 11:00:00");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(30, 6, "2021-05-24 11:00:01");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(17, 6, "2021-05-24 11:00:02");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(19, 6, "2021-05-24 11:00:03");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(21, 6, "2021-05-24 11:00:04");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(22, 6, "2021-05-24 11:00:05");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(20, 6, "2021-05-24 11:00:06");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(23, 3050, "2021-06-15 11:00:04");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(24, 3050, "2021-06-15 11:00:05");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(33, 3050, "2021-06-15 11:00:06");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(23, 4, "2021-06-15 11:00:07");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(24, 4, "2021-06-15 11:00:08");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(18, 5007, "2021-06-13 11:00:04");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(28, 5007, "2021-06-13 11:00:05");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(18, 5, "2021-06-13 11:00:06");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(28, 5, "2021-06-13 11:00:07");
-insert into subscribes (customer_id, service_id, subscription_date_time) values(18, 4, "2021-06-13 11:00:07");
 
 -- ------------------------------------------------------------------------------
 -- SERVICE_CHARGE
@@ -2428,3 +2397,37 @@ values
 (5018, 5018),
 (5019, 5019),
 (5020, 5020);
+
+
+-- ------------------------------------------------------------------------------
+-- SUBSCRIBES
+-- ------------------------------------------------------------------------------
+
+insert into subscribes (customer_id, service_id, subscription_date_time) values(14, 1001, "2020-10-28 12:00:00");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(14, 4, "2020-11-01 11:00:00");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(15, 2021, "2020-12-24 11:00:00");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(16, 2021, "2020-12-24 11:00:00");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(15, 5, "2020-12-24 11:00:00");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(25, 5, "2021-04-24 11:00:01");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(26, 5, "2021-04-24 11:00:02");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(27, 5, "2021-04-24 11:00:03");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(31, 5, "2021-04-24 11:00:04");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(32, 5, "2021-04-24 11:00:05");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(33, 5, "2021-04-24 11:00:06");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(30, 4, "2021-05-24 11:00:00");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(30, 6, "2021-05-24 11:00:01");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(17, 6, "2021-05-24 11:00:02");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(19, 6, "2021-05-24 11:00:03");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(21, 6, "2021-05-24 11:00:04");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(22, 6, "2021-05-24 11:00:05");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(20, 6, "2021-05-24 11:00:06");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(23, 3050, "2021-06-15 11:00:04");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(24, 3050, "2021-06-15 11:00:05");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(33, 3050, "2021-06-15 11:00:06");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(23, 4, "2021-06-15 11:00:07");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(24, 4, "2021-06-15 11:00:08");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(18, 5007, "2021-06-13 11:00:04");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(28, 5007, "2021-06-13 11:00:05");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(18, 5, "2021-06-13 11:00:06");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(28, 5, "2021-06-13 11:00:07");
+insert into subscribes (customer_id, service_id, subscription_date_time) values(18, 4, "2021-06-13 11:00:07");
