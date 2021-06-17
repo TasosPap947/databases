@@ -27,6 +27,7 @@ include('header.php');
       $query = "select nfc_id from customer where".$first_name.$last_name.$document_number.";";
       $result = mysqli_query($conn, $query);
       $rows_data = mysqli_fetch_assoc($result);
+      $nfc_id = $rows_data['nfc_id']
       ?>
       <?php if($nfc_id) {
         ?>
@@ -35,6 +36,7 @@ include('header.php');
           <?php
         }
         else {
+          echo $nfc_id;
           echo "Δεν αντιστοιχεί κάποιο bracelet στον πελάτη ";
           echo $_POST['first_name']." "; echo $_POST['last_name'];
           echo ". Βεβαιωθείτε πως έχετε συμπληρώσει όλα τα πεδία σωστά.";

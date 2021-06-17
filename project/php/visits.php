@@ -56,13 +56,14 @@ select place_name from
     $min_date = $_POST['min_date'];
     $max_date = $_POST['max_date'];
     if ($min_date) {
-      $query_date = $query_date." and entry_date_time <= ".$min_date;
+      $query_date = $query_date." and (timestampdiff(day, entry_date_time, '".$min_date."') <= 0)";
+
       ?>
       <p>Από:<br><?php echo $min_date; ?></p>
       <?php
     }
     if ($max_date) {
-      $query_date = $query_date." and entry_date_time >= ".$max_date;
+      $query_date = $query_date." and (timestampdiff(day, '".$max_date."', entry_date_time) <= 0)";
       ?>
       <p>Έως:<br> <?php echo $max_date; ?></p>
       <?php
