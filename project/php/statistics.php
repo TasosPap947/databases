@@ -67,7 +67,7 @@ function query_c($time, $age_low, $age_high){
     <h3> Τελευταίος Μήνας </h3>
     <?php $time="1"; ?>
 
-    <h4> Ποιοι είναι οι πιο πολυσύχναστοι χώροι: </h4>
+    <h4>  Οι πιο πολυσύχναστοι χώροι: </h4>
 
 <div class="stat-div">
     <table class="stat-table">
@@ -176,7 +176,7 @@ function query_c($time, $age_low, $age_high){
 
 
 
-    <h4> Ποιες είναι οι συχνότερα χρησιμοποιούμενες υπηρεσίες: </h4>
+    <h4>  Οι συχνότερα χρησιμοποιούμενες υπηρεσίες: </h4>
 
 <div class="stat-div">
     <table class="stat-table">
@@ -282,7 +282,7 @@ function query_c($time, $age_low, $age_high){
 
 
 
-  <h4> Ποιες είναι οι υπηρεσίες που χρησιμοποιούνται από τους περισσότερους πελάτες: </h4>
+  <h4>  Οι υπηρεσίες που χρησιμοποιούνται από τους περισσότερους πελάτες: </h4>
 
   <div class="stat-div">
   <table class="stat-table">
@@ -389,7 +389,7 @@ function query_c($time, $age_low, $age_high){
     <h3> Τελευταίος Χρόνος </h3>
     <?php $time="12"; ?>
 
-    <h4> Ποιοι είναι οι πιο πολυσύχναστοι χώροι: </h4>
+    <h4>  Οι πιο πολυσύχναστοι χώροι: </h4>
 
 <div class="stat-div">
     <table class="stat-table">
@@ -500,7 +500,7 @@ function query_c($time, $age_low, $age_high){
 
 
 
-    <h4> Ποιες είναι οι συχνότερα χρησιμοποιούμενες υπηρεσίες: </h4>
+    <h4>  Οι συχνότερα χρησιμοποιούμενες υπηρεσίες: </h4>
 
 <div class="stat-div">
     <table class="stat-table">
@@ -600,7 +600,7 @@ function query_c($time, $age_low, $age_high){
     </table>
   </div>
 
-  <h4> Ποιες είναι οι υπηρεσίες που χρησιμοποιούνται από τους περισσότερους πελάτες: </h4>
+  <h4>  Οι υπηρεσίες που χρησιμοποιούνται από τους περισσότερους πελάτες: </h4>
 
   <div class="stat-div">
   <table class="stat-table">
