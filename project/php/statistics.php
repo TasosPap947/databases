@@ -500,7 +500,7 @@ function query_c($time, $age_low, $age_high){
 
 
 
-    <h4>  Οι συχνότερα χρησιμοποιούμενες υπηρεσίες: </h4>
+    <h4>Οι συχνότερα χρησιμοποιούμενες υπηρεσίες: </h4>
 
 <div class="stat-div">
     <table class="stat-table">
@@ -600,7 +600,7 @@ function query_c($time, $age_low, $age_high){
     </table>
   </div>
 
-  <h4>  Οι υπηρεσίες που χρησιμοποιούνται από τους περισσότερους πελάτες: </h4>
+  <h4>Οι υπηρεσίες που χρησιμοποιούνται από τους περισσότερους πελάτες: </h4>
 
   <div class="stat-div">
   <table class="stat-table">
