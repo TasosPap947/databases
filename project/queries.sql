@@ -69,21 +69,21 @@ order by entry_date_time;
 with
 ipv (customer_id, place_id, entry_date_time, exit_date_time)
 as (select customer_id, place_id, entry_date_time, exit_date_time
-    from visited
-    where visited.customer_id = <infected nfc_id>),
+    from visited as v
+    where v.customer_id = <infected nfc_id>),
 
 apv(customer_id, first_name, last_name, place_id, entry_date_time, exit_date_time)
-as (select customer.nfc_id, customer.first_name,customer.last_name, visited.place_id, visited.entry_date_time, visited.exit_date_time
-    from customer join visited on customer.nfc_id = visited.customer_id)
+as (select c.nfc_id, c.first_name, c.last_name, v.place_id, v.entry_date_time, v.exit_date_time
+    from customer as c join visited as v on c.nfc_id = v.customer_id)
 
-select distinct all_person_visits.customer_id, all_person_visits.first_name, all_person_visits.last_name
-  from ipv join all_person_visits on ipv.place_id = all_person_visits.place_id
+select distinct apv.customer_id, apv.first_name, apv.last_name
+  from ipv join apv on ipv.place_id = apv.place_id
   where
   (
-    (all_person_visits.entry_date_time between ipv.entry_date_time and date_add(ipv.exit_date_time, interval 1 hour))
+    (apv.entry_date_time between ipv.entry_date_time and date_add(ipv.exit_date_time, interval 1 hour))
     or
-    (all_person_visits.exit_date_time between ipv.entry_date_time and date_add(ipv.exit_date_time, interval 1 hour))
-  ) and all_person_visits.customer_id <> <infected nfc-id>;
+    (apv.exit_date_time between ipv.entry_date_time and date_add(ipv.exit_date_time, interval 1 hour))
+  ) and apv.customer_id <> <infected nfc-id>;
 
 -- _____________________________________________________________________________
 
