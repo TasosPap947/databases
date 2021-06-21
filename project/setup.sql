@@ -68,7 +68,21 @@ create table place (
   floor_number int,
   corridor enum("North", "East", "South", "West"),
 
-  primary key (place_id)
+  primary key (place_id),
+
+  constraint number check (
+    (not place_name = "Bar" or (number between 1 and 6)) and
+    (not place_name = "Conference Room" or (number between 1 and 10)) and
+    (not place_name = "Corridor" or (number between 1 and 20)) and
+    (not place_name = "Elevator" or (number between 1 and 5)) and
+    (not place_name = "Gym" or (number between 1 and 4)) and
+    (not place_name = "Hair Salon" or (number = 1)) and
+    (not place_name = "Restaurant" or (number between 1 and 4)) and
+    (not place_name = "Room" or (number between 1 and 400)) and
+    (not place_name = "Sauna" or (number between 1 and 10))
+  ),
+
+  constraint floor_number check (floor_number between 0 and 5)
 );
 
 create table service (
@@ -84,7 +98,9 @@ create table service (
                       ) not null,
   service_cost numeric(8,2),
 
-  primary key (service_id)
+  primary key (service_id),
+
+  constraint service_cost check (service_cost >= 0)
 );
 
 create table service_with_subscription (
@@ -101,7 +117,9 @@ create table service_with_subscription (
 
   foreign key (service_id) references service(service_id)
     on delete cascade
-    on update cascade
+    on update cascade,
+
+  constraint service_cost check (service_cost >= 0)
 );
 
 create table subscribes (
@@ -142,7 +160,9 @@ create table service_charge (
     on update cascade,
   foreign key (service_id) references service(service_id)
     on delete set null
-    on update cascade
+    on update cascade,
+
+  constraint charge_amout check (charge_amount >= 0)
 );
 
 create table service_without_subscription (
@@ -158,7 +178,9 @@ create table service_without_subscription (
 
   foreign key (service_id) references service(service_id)
     on delete cascade
-    on update cascade
+    on update cascade,
+
+  constraint service_cost check (service_cost >= 0)
 );
 
 create table has_access_to (
