@@ -192,7 +192,7 @@ create table has_access_to (
   primary key (customer_id, place_id),
 
   foreign key (customer_id) references customer(nfc_id)
-    on delete restrict
+    on delete cascade
     on update cascade,
   foreign key (place_id) references place(place_id)
     on delete restrict
