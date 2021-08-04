@@ -1,3 +1,0 @@
-service_id --> service_charge 11b,c 
-nfc_id and date of birth --> customer 11
-customer_id, place_id, entry_date_time, exit_date_time --> visited 10 
